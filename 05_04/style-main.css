@@ -242,10 +242,25 @@ Card grid:
 --------------------------------------------------------------*/
 
 @supports (grid-area: auto) {
+  .time {
+    grid-column: 1;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .card a {
     display: grid;
     grid-template-columns: 6em auto;
     grid-template-rows: 1fr 1fr;
     padding: 0;
+  }
+
+  .meta {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: flex-end;
   }
 }
